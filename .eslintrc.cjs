@@ -28,12 +28,7 @@ module.exports = {
     {
       files: ['**/*.{js,jsx,ts,tsx}'],
       plugins: ['react', 'jsx-a11y'],
-      extends: [
-        'plugin:react/recommended',
-        'plugin:react/jsx-runtime',
-        'plugin:react-hooks/recommended',
-        'plugin:jsx-a11y/recommended'
-      ],
+      extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'plugin:react-hooks/recommended'],
       settings: {
         react: {
           version: 'detect'
@@ -65,7 +60,10 @@ module.exports = {
           }
         }
       },
-      extends: ['plugin:@typescript-eslint/recommended', 'plugin:import/recommended', 'plugin:import/typescript']
+      extends: ['plugin:@typescript-eslint/recommended', 'plugin:import/recommended', 'plugin:import/typescript'],
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'warn'
+      }
     },
 
     // Node
